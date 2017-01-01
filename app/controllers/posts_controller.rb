@@ -14,7 +14,10 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to group_path(@group)
+    else
+       render :new
     end
+
   end
 
   private
